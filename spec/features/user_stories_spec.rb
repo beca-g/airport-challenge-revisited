@@ -20,4 +20,14 @@ describe "user stories" do
     plane = Plane.new
     expect { airport.take_off(plane) }.not_to raise_error
   end
+
+  # As an air traffic controller 
+  # To ensure safety 
+  # I want to prevent landing when the airport is full 
+  it "prevents planes landing when the airport is at capacity" do
+    airport = Airport.new
+    plane = Plane.new
+    20.times { airport.land(plane) }
+    expect { airport.land(plane) }.to raise_error "Unable to land: airport full."
+  end
 end
