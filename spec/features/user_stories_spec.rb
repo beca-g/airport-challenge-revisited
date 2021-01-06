@@ -19,6 +19,7 @@ describe "user stories" do
     # So I can get passengers on the way to their destination 
     # I want to instruct a plane to take off from an airport and confirm that it is no longer in the airport
     it "so planes can take off from airports, instruct a plane to take off" do
+      airport.land(plane)
       expect { airport.take_off(plane) }.not_to raise_error
     end
 
@@ -55,7 +56,7 @@ describe "user stories" do
     # To ensure safety 
     # I want to prevent takeoff when weather is stormy 
     it "does not allow planes to take off" do
-      expect {airport.take_off(plane) }.to raise_error "Unable to take off: weather is stormy."
+      expect { airport.take_off(plane) }.to raise_error "Unable to take off: weather is stormy."
     end
   end
 end
