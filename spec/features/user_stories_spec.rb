@@ -1,10 +1,11 @@
 describe "user stories" do
-  let(:airport) { Airport.new }
+  let(:airport) { Airport.new(weather) }
   let(:plane) { Plane.new }
+  let(:weather) { Weather.new }
 
   context "when weather is not stomry" do
     before do
-      allow(airport).to receive(:stormy?).and_return false
+      allow(weather).to receive(:stormy?).and_return false
     end
 
     # As an air traffic controller 
@@ -40,7 +41,7 @@ describe "user stories" do
 
   context "when stormy" do
     before do
-      allow(airport).to receive(:stormy?).and_return true
+      allow(weather).to receive(:stormy?).and_return true
     end
 
     # As an air traffic controller 
