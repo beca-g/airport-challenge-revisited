@@ -27,7 +27,10 @@ describe "user stories" do
     # To ensure safety 
     # I want to prevent landing when the airport is full 
     it "prevents planes landing when the airport is at capacity" do
-      20.times { airport.land(plane) }
+      20.times do
+        new_plane = Plane.new
+        airport.land(new_plane)
+      end
       expect { airport.land(plane) }.to raise_error "Unable to land: airport full."
     end
 
@@ -35,7 +38,10 @@ describe "user stories" do
     # So that the software can be used for many different airports
     # I would like a default airport capacity that can be overridden as appropriate
     it "airports have a default capacity" do
-      Airport::DEFAULT_CAPACITY.times { airport.land(plane) }
+      Airport::DEFAULT_CAPACITY.times do
+        new_plane = Plane.new
+        airport.land(new_plane)
+      end
       expect { airport.land(plane) }.to raise_error "Unable to land: airport full."
     end
   end
