@@ -59,4 +59,5 @@ Given the user stories above I firstly planned the structure of my classes.
 
 - I then diagrammed and predicted how each class would work together. 
 
-![Imgur](https://imgur.com/zFQRHUf.png)
+![Imgur](https://imgur.com/yQCXdVo.png)
+
