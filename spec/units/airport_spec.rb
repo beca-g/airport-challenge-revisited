@@ -49,6 +49,12 @@ describe Airport do
         expect(airport.take_off(plane)).to eq plane 
       end
 
+      it "removes plane from the runway after take off" do
+        airport.land(plane)
+        airport.take_off(plane)
+        expect(airport.runway).not_to include plane
+      end
+
       it "raises an error if the plane is not in this airport" do
         new_airport = described_class.new(10, weather)
         new_airport.land(plane)

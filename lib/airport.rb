@@ -23,6 +23,7 @@ class Airport
     raise "Unable to take off: plane is not in this airport." unless in_airport?(plane)
 
     plane.take_off
+    @runway.delete(plane)
     plane
   end
 
