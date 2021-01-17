@@ -54,7 +54,7 @@ The code should defend against edge cases such as inconsistent states of the sys
 # My apporach
 I had a test driven and OOP approach to this challenge, firstly working through the user stories and then carrying out a plan for the classes and structure.
 
-- I planned the basic structure of the code by breaking down the given user stories into classes and methods by extracting the nouns and verbs. For readablilty and to simplify the code as much as possible I decided to have three classes: Airport, Plane and Weather.
+- I planned the basic structure of the code by breaking down the given user stories into classes and methods and extracting the nouns and verbs. For readability and to simplify the code as much as possible I decided to have three classes: Airport, Plane and Weather.
 
 | Class   | Attributes                              | Methods                   |
 |---------|-----------------------------------------|---------------------------|
