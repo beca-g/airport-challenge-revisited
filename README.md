@@ -74,4 +74,3 @@ I had a test driven and OOP approach to this challenge, firstly working through 
 - rspec
 - simple-cov
 - rubocop
-
